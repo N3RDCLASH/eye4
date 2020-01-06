@@ -12,10 +12,14 @@ class InventoryState extends State<Inventory> {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Center(child:
-          Text('Inventory'),
-        ),
+        title: Center(child: Text('Inventory')),
       ),
+      body: Center(
+          child: Column(
+        children: <Widget>[
+          
+        ],
+      )),
     );
   }
 }

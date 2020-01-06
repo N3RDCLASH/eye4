@@ -36,7 +36,7 @@ class HomeState extends State<Home> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.system_update_alt),
             title: Text('Inventory'),
           ),
           BottomNavigationBarItem(
@@ -44,8 +44,8 @@ class HomeState extends State<Home> {
             title: Text('Schedule'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.work),
-            title: Text('Work'),
+            icon: Icon(Icons.list),
+            title: Text('Projects'),
           ),
         ],
         currentIndex: _selectedIndex,
