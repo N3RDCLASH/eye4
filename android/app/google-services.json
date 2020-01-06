@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "716509572203",
+    "firebase_url": "https://eye4-109d0.firebaseio.com",
+    "project_id": "eye4-109d0",
+    "storage_bucket": "eye4-109d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:716509572203:android:e8bac66086988008e0952e",
+        "android_client_info": {
+          "package_name": "com.eye4.eye4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "716509572203-qoul4h8i196ud8ojgn1e9jkbmhrd8r85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPjIlK42N5xN4b9iJrU1jWWJ5mbMnWhmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "716509572203-qoul4h8i196ud8ojgn1e9jkbmhrd8r85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
