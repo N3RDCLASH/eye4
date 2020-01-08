@@ -1,6 +1,7 @@
 import 'package:eye4/screens/inventory_screen.dart';
 import 'package:eye4/screens/projects_screen.dart';
 import 'package:eye4/screens/schedule_screen.dart';
+import 'package:eye4/style/theme.dart';
 import "package:flutter/material.dart";
 
 class Home extends StatefulWidget {
@@ -12,10 +13,10 @@ class HomeState extends State<Home> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static  List<Widget> _widgetOptions = <Widget>[
+  static List<Widget> _widgetOptions = <Widget>[
     Inventory(),
     Schedule(),
-    Project(),
+    Projects(),
   ];
 
   void _onItemTapped(int index) {
@@ -34,18 +35,37 @@ class HomeState extends State<Home> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: primary_color,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.system_update_alt),
-            title: Text('Inventory'),
+            icon: Icon(
+              Icons.system_update_alt,
+              color: white_color,
+            ),
+            title: Text(
+              'Inventory',
+              style: white_text,
+            ),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today),
-            title: Text('Schedule'),
+            icon: Icon(
+              Icons.calendar_today,
+              color: white_color,
+            ),
+            title: Text(
+              'Schedule',
+              style: white_text,
+            ),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.list),
-            title: Text('Projects'),
+            icon: Icon(
+              Icons.list,
+              color: white_color,
+            ),
+            title: Text(
+              'Projects',
+              style: white_text,
+            ),
           ),
         ],
         currentIndex: _selectedIndex,
