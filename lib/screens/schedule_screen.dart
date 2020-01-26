@@ -1,6 +1,7 @@
 import 'package:eye4/style/theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Schedule extends StatefulWidget {
   @override
@@ -14,9 +15,14 @@ class ScheduleState extends State<Schedule> {
     return Scaffold(
       backgroundColor: primary_color,
       appBar: AppBar(
+        leading: logo,
         backgroundColor: primary_color,
-        title: Center(
-          child: Text('Schedule'),
+        title: Padding(
+          padding: EdgeInsets.fromLTRB(160, 0, 0, 0),
+          child: Text(
+            'SCHEDULE',
+            style: GoogleFonts.varelaRound(),
+          ),
         ),
       ),
     );

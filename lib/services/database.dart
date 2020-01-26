@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:eye4/models/item.dart';
 import 'package:eye4/models/project.dart';
 
@@ -17,6 +18,7 @@ class DatabaseService {
       String supplier,
       DateTime purchasedate,
       double amount,
+      int quantity,
       String condition,
       String link,
       String image) async {
@@ -26,6 +28,7 @@ class DatabaseService {
       'supplier': supplier,
       'purchasedate': purchasedate,
       'amount': amount,
+      'quantity': quantity,
       'condition': condition,
       'link': link,
       'image': image
@@ -70,6 +73,7 @@ class DatabaseService {
             supplier: doc.data['supplier'] ?? '',
             purchasedate: doc.data['purchasedate'],
             amount: doc.data['amount'],
+            quantity: doc.data['quantity'],
             condition: doc.data['condition'] ?? '',
             link: doc.data['link'] ?? '',
             image: doc.data['image'] ?? '');
@@ -78,12 +82,22 @@ class DatabaseService {
   }
 
   List<Project> _projectsListFromSnapshot(QuerySnapshot snapshot) {
-    return snapshot.documents.map((doc){
+    return snapshot.documents.map((doc) {
       return Project(
-        client: doc.data['client'],
-
+        projectid: doc.documentID,
+        client: doc.data['client'] ?? '',
+        date: doc.data['date'],
+        occasion: doc.data['occasion'] ?? '',
+        address: doc.data['address'] ?? '',
+        time: doc.data['time'],
+        extendedtime: doc.data['extendedtime'],
+        price: doc.data['price'] ?? 0,
+        deposit: doc.data['deposit'] ?? 0,
+        balance: doc.data['balance'],
+        assignedto: doc.data['assignedto'],
+        completed: doc.data['completed'],
       );
-    });
+    }).toList();
   }
 
   Stream<List<Item>> get items {
@@ -94,3 +108,7 @@ class DatabaseService {
     return projectsCollection.snapshots().map(_projectsListFromSnapshot);
   }
 }
+
+// class _UploaderState extends State<Uploader>{
+
+// }

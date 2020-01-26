@@ -36,14 +36,14 @@ class HomeState extends State<Home> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: primary_color,
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
               Icons.system_update_alt,
               color: white_color,
             ),
             title: Text(
-              'Inventory',
+              '',
               style: white_text,
             ),
           ),
@@ -53,17 +53,17 @@ class HomeState extends State<Home> {
               color: white_color,
             ),
             title: Text(
-              'Schedule',
+              '',
               style: white_text,
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.list,
+              Icons.format_list_bulleted,
               color: white_color,
             ),
             title: Text(
-              'Projects',
+              '',
               style: white_text,
             ),
           ),

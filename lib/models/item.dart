@@ -7,6 +7,7 @@ class Item {
   final String supplier;
   final Timestamp purchasedate;
   final double amount;
+  final int quantity;
   final String condition;
   final String link;
   final String image;
@@ -18,6 +19,7 @@ class Item {
     this.supplier,
     this.purchasedate,
     this.amount,
+    this.quantity,
     this.condition,
     this.link,
     this.image,
